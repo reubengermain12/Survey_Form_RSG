@@ -1,20 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Development [&] Software Enginnering Survey Form</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>Software Developer Questionnaire</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <h1 id="title" class="text-center">
-          Web Development [&] Software Enginnering Survey Form
-        </h1>
+        <h1 id="title" class="text-center">Software Developer Questionnaire</h1>
         <p id="description" class="description text-center">
-          Please fill out this form with the required information
+          Thank you for taking the time to help give us an idea of what computer
+          programming languages our potential students are interested in
         </p>
       </header>
       <form id="survey-form">
@@ -26,16 +22,195 @@
             id="name"
             class="form-control"
             placeholder="Enter your name"
+            required
           />
         </div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <div class="form-group"></div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            Would you recommend Software Development / Software Engineering to a
+            friend?
+          </p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitely</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Maybe</label
+          >
+
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>
+            What is your favorite element of our Software Development course?
+          </p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Individual coding challenges</option>
+            <option value="projects">Building projects</option>
+            <option value="community">Group challenges</option>
+            <option value="openSource">Open source decoding</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            What are some of your favourite programming languages?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <label
+            ><input
+              name="prefer"
+              value="html"
+              type="checkbox"
+              class="input-checkbox"
+            />HTML</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="css"
+              type="checkbox"
+              class="input-checkbox"
+            />CSS</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="javascript"
+              type="checkbox"
+              class="input-checkbox"
+            />JavaScript</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="Java"
+              type="checkbox"
+              class="input-checkbox"
+            />Java</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="python"
+              type="checkbox"
+              class="input-checkbox"
+            />Python</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="c#"
+              type="checkbox"
+              class="input-checkbox"
+            />C#</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="c++"
+              type="checkbox"
+              class="input-checkbox"
+            />C++</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="php"
+              type="checkbox"
+              class="input-checkbox"
+            />PHP</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="solidity"
+              type="checkbox"
+              class="input-checkbox"
+            />Solidity</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="go"
+              type="checkbox"
+              class="input-checkbox"
+            />Go</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   </body>
