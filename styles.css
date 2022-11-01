@@ -37,7 +37,7 @@ body::before {
       rgba(27, 30, 30, 0.274),
       rgba(5, 5, 255, 0.7)
     ),
-    url(https://blog.hubspot.com/hubfs/Software%20developer%20vs%20software%20engineer.jpg);
+    url("Sophie Coding.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
